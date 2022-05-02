@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PacMacScript : MonoBehaviour
+public class PacManScript : MonoBehaviour
 {
     Rigidbody rb;
     NavMeshAgent pinkGhostAgent;
