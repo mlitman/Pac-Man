@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PacMacScript : MonoBehaviour
+public class PacManScript : MonoBehaviour
 {
     Rigidbody rb;
     NavMeshAgent pinkGhostAgent;
@@ -33,7 +33,7 @@ public class PacMacScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    
+
     void Update()
     {
         this.pinkGhostAgent.SetDestination(this.gameObject.transform.position);
@@ -42,15 +42,15 @@ public class PacMacScript : MonoBehaviour
         {
             rb.velocity = Vector3.forward * speed;
         }
-        else if(goBackward)
+        else if (goBackward)
         {
             rb.velocity = Vector3.back * speed;
         }
-        else if(goLeft)
+        else if (goLeft)
         {
             rb.velocity = Vector3.left * speed;
         }
-        else if(goRight)
+        else if (goRight)
         {
             rb.velocity = Vector3.right * speed;
         }
@@ -62,7 +62,7 @@ public class PacMacScript : MonoBehaviour
             goBackward = false;
             goRight = false;
             goLeft = false;
-            
+
         }
         else if (Input.GetKeyDown("down"))
         {
@@ -72,7 +72,7 @@ public class PacMacScript : MonoBehaviour
             goBackward = true;
             goRight = false;
             goLeft = false;
-            
+
         }
         else if (Input.GetKeyDown("left"))
         {
@@ -82,7 +82,7 @@ public class PacMacScript : MonoBehaviour
             goBackward = false;
             goRight = false;
             goLeft = true;
-            
+
         }
         else if (Input.GetKeyDown("right"))
         {
@@ -92,7 +92,7 @@ public class PacMacScript : MonoBehaviour
             goBackward = false;
             goRight = true;
             goLeft = false;
-            
+
         }
     }
 }
