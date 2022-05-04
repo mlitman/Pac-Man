@@ -12,6 +12,7 @@ public class PacManScript : MonoBehaviour
     public GameObject scoreText;
     public float speed = 20.0f;
     public GameObject pinkGhost;
+    public GameObject PowerPellet;
 
     private bool goForward = false;
     private bool goBackward = false;
@@ -22,6 +23,7 @@ public class PacManScript : MonoBehaviour
     {
         rb = this.gameObject.GetComponent<Rigidbody>();
         pinkGhostAgent = this.pinkGhost.GetComponent<NavMeshAgent>();
+        PowerPellet = this.PowerPellet.GetComponent<NavMeshAgent>();
         pinkGhostAgent.speed = 2.0f;
         this.theScoreTextMesh = this.scoreText.GetComponent<TextMesh>();
     }
@@ -30,8 +32,21 @@ public class PacManScript : MonoBehaviour
     void Start()
     {
         this.theScoreTextMesh.text = "WOOT!!!";
+        
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag.Equals("PacMan"))
+        {
+            count++;
+            if (count == 1)
+            {
+                Destroy(this.PowerPellet);
+                theScoreTextMesh++;
+            }
+        }
+    }
     // Update is called once per frame
 
     void Update()
