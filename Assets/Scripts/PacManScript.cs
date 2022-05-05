@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PacMacScript : MonoBehaviour
+public class PacManScript : MonoBehaviour
 {
     Rigidbody rb;
     NavMeshAgent pinkGhostAgent;
@@ -32,6 +32,12 @@ public class PacMacScript : MonoBehaviour
         this.theScoreTextMesh.text = "WOOT!!!";
     }
 
+    private void
+    {
+
+    }
+
+}
     // Update is called once per frame
 
     void Update()
@@ -94,5 +100,6 @@ public class PacMacScript : MonoBehaviour
             goLeft = false;
 
         }
+
     }
 }

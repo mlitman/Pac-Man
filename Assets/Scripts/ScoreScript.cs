@@ -18,7 +18,4 @@ public class ScoreScript : MonoBehaviour
         this.tm.text = "Score: " + CORE.score;
     }
 }
-© 2022 GitHub, Inc.
-Terms
-Privacy
 

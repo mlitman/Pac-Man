@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PelletKilScript : MonoBehaviour
+public class PelletKillScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,15 @@ public class PelletKilScript : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    private void OnCollisionEnter("Enemy")
+    {
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            Destroy(this.pinkGhostAgent)
+        }
+    }
+       
 
     // Update is called once per frame
     void Update()

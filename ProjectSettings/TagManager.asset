@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - MazeGeo
+  - New tag
   layers:
   - Default
   - TransparentFX
